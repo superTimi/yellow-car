@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title></title>
+</head>
+<body>
+	<h1>
+		我是webView 的html文件
+	</h1>
+	<div id="box"></div>
+	<button type="button" id="btn">点我调用原生java代码</button>
+</body>
+</html>
+<script type="text/javascript">
+	var box = document.getElementById('box');
+	var btn = document.getElementById('btn');
+	function setBox(){
+		box.innerHTML = '我是java代码调用的';
+	}
+	
+	btn.onclick = function(){
+		javaHander.showDialog('我是前端传递过来的')
+	}
+	
+</script>
